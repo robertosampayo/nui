@@ -1,0 +1,72 @@
+@import "../styles/_vars";
+@import "../styles/_utils";
+
+.home__follow {
+  height: auto;
+  width: 95%;
+  position: relative;
+  padding: 30px 0px 0 0px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: $desktop) {
+    border: solid $pink;
+    border-width: 0.5px 0 0;
+  }
+  @media only screen and (min-width: $bigScreen) {
+    border: solid $pink;
+    border-width: 0.5px 0 0;
+  }
+
+  img {
+    padding: 0 20px;
+  }
+
+  h1 {
+    margin: 0;
+    position: absolute;
+    top: -30px;
+    width: auto;
+    background: white;
+    padding: 0 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media only screen and (min-width: $desktop) {
+      font: normal normal normal 48px/56px "Lato";
+      letter-spacing: -0.96px;
+    }
+    @media only screen and (min-width: $bigScreen) {
+      font: normal normal normal 48px/56px "Lato";
+      letter-spacing: -0.96px;
+    }
+  }
+
+  .follow__slider__desktop {
+    width: 100%;
+    display: none;
+
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: center;
+      margin: 50px 0 0 0;
+    }
+    @media only screen and (min-width: $bigScreen) {
+      display: flex;
+      justify-content: center;
+      margin: 50px 0 0 0;
+    }
+  }
+
+  .follow__slider__mobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (min-width: $desktop) {
+      display: none;
+    }
+    @media only screen and (min-width: $bigScreen) {
+      display: none;
+    }
+  }
+}

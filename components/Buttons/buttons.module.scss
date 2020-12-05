@@ -1,0 +1,87 @@
+@import "../../styles/_vars";
+
+.cta {
+  background: $white;
+  height: 50px;
+
+  @media only screen and (min-width: $desktop) {
+    height: 30px;
+    padding: 30px 50px 50px;
+  }
+  @media only screen and (min-width: $bigScreen) {
+    height: 30px;
+    padding: 30px 50px 50px;
+  }
+
+  &.no__padding {
+    padding: 0;
+  }
+
+  &.padding__bottom {
+    padding-bottom: 20px;
+  }
+}
+
+.banner__cta__pink {
+  border: 3px solid $pink;
+  padding: 1rem;
+  width: 175px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.pink {
+  > a {
+    > span {
+      color: $pink;
+    }
+  }
+}
+
+.banner__cta {
+  position: relative;
+  padding: 0;
+}
+.banner__cta {
+  > span {
+    display: flex;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: -0.48px;
+    position: relative;
+    top: 3px;
+    > div {
+      height: 100%;
+    }
+  }
+}
+
+.cta__regular {
+  > span {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+  }
+}
+
+.Button {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: inherit;
+    background: white;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+  }
+  &:hover::before {
+    opacity: 0.2;
+  }
+}

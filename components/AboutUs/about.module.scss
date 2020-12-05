@@ -1,0 +1,112 @@
+@import "../../styles/_vars";
+@import "../../styles/_utils";
+
+.about {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 68px;
+
+  @media only screen and (min-width: $desktop) {
+    padding-bottom: 0px;
+  }
+  @media only screen and (min-width: $bigScreen) {
+    padding-bottom: 0px;
+  }
+
+  .container {
+    @include flexCenter;
+    position: relative;
+
+    .title {
+      @include flexCenter;
+
+      .pink__line {
+        width: 80px;
+        margin: 0;
+        padding: 0;
+        background: $pink;
+        height: 2px;
+        border: 0;
+      }
+
+      @media only screen and (min-width: $desktop) {
+        position: absolute;
+        background: $white;
+        position: absolute;
+        top: -45px;
+        padding: 0 20px;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        position: absolute;
+        background: $white;
+        position: absolute;
+        top: -45px;
+        padding: 0 20px;
+      }
+    }
+
+    .container__line {
+      @include flexCenter;
+
+      @media only screen and (min-width: $desktop) {
+        border: 1px solid $pink;
+        padding: 20px 0 0 0;
+        width: 500px;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        border: 1px solid $pink;
+        padding: 20px 0 0 0;
+        width: 500px;
+      }
+
+      .know__us {
+        height: 50px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      > p {
+        @media only screen and (min-width: $desktop) {
+          width: 90%;
+          margin: 40px 0;
+        }
+        @media only screen and (min-width: $bigScreen) {
+          width: 90%;
+          margin: 40px 0;
+        }
+      }
+    }
+  }
+}
+
+.know__more {
+  position: relative;
+  height: 210px;
+  margin: 20px 0;
+  display: none;
+
+  @media only screen and (min-width: $desktop) {
+    display: block;
+  }
+  @media only screen and (min-width: $bigScreen) {
+    display: block;
+  }
+
+  .line {
+    position: absolute;
+    left: 49%;
+    top: 30%;
+    bottom: 0;
+    width: 1px;
+    background: #ccc;
+    z-index: 1;
+    height: 60%;
+  }
+}

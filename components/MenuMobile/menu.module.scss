@@ -1,0 +1,52 @@
+@import "../styles/_vars";
+@import "../styles/_utils";
+
+.menu__mobile {
+  position: fixed;
+  background: $pink;
+  height: 100vh;
+  width: 100%;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  padding: 45px;
+  justify-content: flex-end;
+
+  h1 {
+    color: $white;
+    font-size: 55px;
+    margin: 0 0 30px;
+    text-align: left;
+  }
+  hr {
+    width: 100%;
+  }
+
+  .close {
+    color: $white;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+  }
+
+  .links {
+    text-align: left;
+    font: normal normal normal 30px/49px "Lato";
+    letter-spacing: -0.9px;
+
+    span {
+      font-size: 25px;
+      color: $pinkLight2;
+    }
+  }
+
+  .social {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $white;
+  }
+}

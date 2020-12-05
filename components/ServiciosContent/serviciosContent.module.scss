@@ -1,0 +1,11 @@
+main {
+  .service__card__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 70px;
+  }
+}

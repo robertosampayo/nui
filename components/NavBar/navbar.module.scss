@@ -1,0 +1,88 @@
+@import "../../styles/_vars";
+@import "../../styles/_utils";
+
+.navbar {
+  @include flexCenter;
+  width: 100%;
+  height: 70px;
+  // border: solid 2px red;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+  position: fixed;
+  z-index: 99999;
+
+  .container {
+    width: 95%;
+    @include flexCenter(row);
+    justify-content: space-between;
+
+    .logo {
+      position: relative;
+      width: auto;
+      height: 40px;
+    }
+    .navbar__menuicon__container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .navbar__menuicon {
+        width: 30px;
+        height: 35px;
+        margin: 0 20px;
+        color: $pink;
+
+        @media only screen and (min-width: $desktop) {
+          display: none;
+        }
+        @media only screen and (min-width: $bigScreen) {
+          display: none;
+        }
+      }
+    }
+
+    > h1 {
+      color: $black;
+    }
+
+    .menu {
+      width: 100%;
+      display: none;
+      @media only screen and (min-width: $desktop) {
+        @include flexCenter(row);
+        justify-content: flex-end;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        @include flexCenter(row);
+        justify-content: flex-end;
+      }
+
+      ul {
+        @include flexCenter(row);
+        color: $grayLight3;
+        width: 150px;
+        justify-content: space-between;
+        margin: 0 0 0 20px;
+
+        li {
+          span {
+            text-align: left;
+            font: normal normal normal 15px/18px Lato;
+            letter-spacing: 0px;
+            color: #373737;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .links {
+        width: 474px;
+      }
+
+      .social {
+        width: 150px;
+      }
+    }
+  }
+}

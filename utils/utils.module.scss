@@ -1,0 +1,51 @@
+@import '../styles/_vars';
+
+.flexbox {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.center {
+    justify-items: center;
+    align-items: center;
+}
+
+
+.pagination {
+
+    margin: 20px 0;
+
+    .dot {
+    
+        cursor: pointer;
+        transition: all 250ms ease-in;
+        background-color: $pink;
+        color: "#fff";
+        transform: scale(1.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 11px;
+        height: 11px;
+        margin: 10px 10px;
+        opacity: 0.39;
+        border-radius: 1rem;
+    
+        &.active {
+            background-color: $pink;
+            color: #fff;
+            transform: scale (1);
+            opacity: 1
+        }
+    
+    }
+
+
+}

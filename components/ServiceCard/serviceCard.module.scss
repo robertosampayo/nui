@@ -1,0 +1,32 @@
+@import "../../styles/_vars";
+
+.service__card {
+  width: 90%;
+  text-align: left;
+  background-color: $white;
+  box-shadow: 0px 3px 10px #00000029;
+  z-index: 999;
+  position: relative;
+  margin: 0 0 20px;
+  justify-self: center;
+
+  img {
+    width: 100%;
+  }
+  h2 {
+    text-align: left;
+    font: normal normal normal 40px/64px Lato;
+    letter-spacing: -1.04px;
+    color: $pinkLight3;
+  }
+  h2,
+  .cta {
+    padding: 0 50px;
+    text-align: left;
+    margin: 35px 0 16px;
+  }
+  .text__section {
+    padding: 0 50px;
+    margin: 0;
+  }
+}

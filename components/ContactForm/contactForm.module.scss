@@ -1,0 +1,164 @@
+@import "../styles/_vars";
+@import "../styles/_utils";
+
+.contact__container {
+  height: auto;
+  width: 100vw;
+
+  .contact {
+    @include flexCenter;
+    text-align: center;
+
+    @media only screen and (min-width: $desktop) {
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 80px;
+    }
+    @media only screen and (min-width: $bigScreen) {
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 80px;
+    }
+
+    > h1 {
+      @media only screen and (min-width: $desktop) {
+        font: normal normal normal 48px/56px Lato;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        letter-spacing: -0.96px;
+      }
+    }
+
+    .contact__content {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      width: 90%;
+      justify-content: center;
+      align-items: center;
+
+      @media only screen and (min-width: $desktop) {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: 1fr;
+        column-gap: 50px;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: 1fr;
+        column-gap: 50px;
+      }
+
+      .dashed {
+        background-image: linear-gradient(
+          to right,
+          #707070 45%,
+          rgba(255, 255, 255, 0) 0%
+        );
+        background-position: bottom;
+        background-size: 15.8px 1.7px;
+        background-repeat: repeat-x;
+        width: 100%;
+        // border: dashed #707070;
+        // border-width: 0 0 1px 0;
+        color: $gray2;
+        padding: 0 0 35px;
+
+        @media only screen and (min-width: $desktop) {
+          background-image: initial;
+        }
+        @media only screen and (min-width: $bigScreen) {
+          background-image: initial;
+        }
+
+        > hr {
+          border: 1px dashed #707070;
+          margin: 40px 0;
+        }
+
+        p {
+          margin: 0;
+          color: $grayText;
+          font: normal normal 300 14px/22px "Lato";
+          letter-spacing: -0.14px;
+          font-size: 14px;
+          line-height: 22pt;
+          width: 80%;
+          text-align: left;
+
+          @media only screen and (min-width: $desktop) {
+            font: normal normal 300 23px/42px Lato;
+            letter-spacing: -0.16px;
+          }
+          @media only screen and (min-width: $bigScreen) {
+            font: normal normal 300 23px/42px Lato;
+            letter-spacing: -0.16px;
+          }
+        }
+
+        .contact__social {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          @media only screen and (min-width: $desktop) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+          }
+          @media only screen and (min-width: $bigScreen) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+          }
+
+          h3 {
+            font: normal normal bold 26px/42px Lato;
+            letter-spacing: -0.18px;
+            margin: 0;
+          }
+
+          ul {
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+
+            @media only screen and (min-width: $desktop) {
+              width: 30%;
+            }
+            @media only screen and (min-width: $bigScreen) {
+              width: 30%;
+            }
+          }
+        }
+      }
+
+      form {
+        width: 100%;
+        @include flexCenter;
+        padding: 35px 0px;
+        @media only screen and (min-width: $desktop) {
+          padding: 0px 0px 35px;
+        }
+        @media only screen and (min-width: $bigScreen) {
+          padding: 0px 0px 35px;
+        }
+
+        > input,
+        textarea {
+          width: 100%;
+          padding: 10px;
+          margin: 0 0 20px;
+          border: 1px solid $grayLight2;
+          resize: none;
+        }
+        > textarea {
+          height: 188px;
+        }
+      }
+    }
+  }
+}

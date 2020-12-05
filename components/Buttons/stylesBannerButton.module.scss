@@ -1,0 +1,16 @@
+
+
+.banner__cta {
+    position: relative;
+    padding: 0;
+     > span {
+      display: flex;
+     }
+}
+
+.banner__title__box {
+    border: solid 2px;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+  }

@@ -1,0 +1,179 @@
+@import "../../styles/_vars";
+@import "../../styles/_utils";
+
+main {
+  .banner {
+    @media only screen and (min-width: $desktop) {
+      height: 700px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      direction: rtl;
+      margin: 0 0 143px;
+    }
+    @media only screen and (min-width: $bigScreen) {
+      height: 700px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      direction: rtl;
+      margin: 0 0 143px;
+    }
+    .img__content {
+      background: url("../../public/images/portafolio/belen-eze.png");
+      width: 100%;
+      height: 40vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 75%;
+
+      @media only screen and (min-width: $desktop) {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 90%;
+        top: 10%;
+        position: relative;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 90%;
+        top: 10%;
+        position: relative;
+      }
+    }
+
+    .know__more {
+      @media only screen and (min-width: $desktop) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .know__more__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 100px 0 60px 0;
+
+        @media only screen and (min-width: $desktop) {
+          text-align: left;
+          justify-content: flex-start;
+          align-items: flex-end;
+        }
+        @media only screen and (min-width: $bigScreen) {
+          text-align: left;
+          justify-content: flex-start;
+          align-items: flex-end;
+          width: 50%;
+        }
+
+        p {
+          font: normal normal 300 16px/23px Lato;
+          letter-spacing: -0.16px;
+          color: #2e2e2e;
+        }
+
+        h1,
+        h4 {
+          text-align: center;
+          font: normal normal 300 27px/45px Lato;
+          letter-spacing: -0.54px;
+        }
+
+        h4 {
+          color: $pink;
+          margin: 0;
+
+          @media only screen and (min-width: $desktop) {
+            font-size: 43px;
+            letter-spacing: -0.86px;
+            width: 160px;
+          }
+          @media only screen and (min-width: $bigScreen) {
+            font-size: 43px;
+            letter-spacing: -0.86px;
+            width: 160px;
+          }
+        }
+
+        h1 {
+          font-size: 50px;
+          margin: 0;
+          @media only screen and (min-width: $desktop) {
+            font-size: 83px;
+            line-height: 72px;
+            letter-spacing: -1.66px;
+          }
+          @media only screen and (min-width: $bigScreen) {
+            font-size: 83px;
+            line-height: 72px;
+            letter-spacing: -1.66px;
+          }
+        }
+      }
+    }
+
+    .know__more__line {
+      position: relative;
+      height: 210px;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+
+      @media only screen and (min-width: $desktop) {
+        justify-content: flex-end;
+        width: 90%;
+        flex-direction: column-reverse;
+        text-align: end;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        height: 120px;
+        justify-content: flex-end;
+        width: 50%;
+        flex-direction: column-reverse;
+        text-align: end;
+        margin: 0 auto;
+      }
+
+      .line {
+        position: absolute;
+        left: 49%;
+        top: 30%;
+        bottom: 0;
+        width: 1px;
+        background: #ccc;
+        z-index: 1;
+        height: 60%;
+
+        @media only screen and (min-width: $desktop) {
+          position: absolute;
+          left: 0%;
+          top: 40%;
+          bottom: 0;
+          width: 1px;
+          background: #ccc;
+          z-index: 1;
+          height: auto;
+        }
+        @media only screen and (min-width: $bigScreen) {
+          position: absolute;
+          left: 0%;
+          top: 40%;
+          bottom: 0;
+          width: 1px;
+          background: #ccc;
+          z-index: 1;
+          height: auto;
+        }
+      }
+    }
+  }
+}

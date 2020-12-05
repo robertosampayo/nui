@@ -1,0 +1,292 @@
+@import "./_vars";
+@import "./_utils";
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 300;
+  font-display: auto;
+  src: url("../public/fonts/Lato/Lato-Light.woff") format("woff");
+  src: url("../public/fonts/Lato/Lato-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  font-display: auto;
+  src: url("../public/fonts/Lato/Lato-Regular.woff") format("woff"),
+    url("../public/fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 900;
+  font-display: auto;
+  src: url("../public/fonts/Lato/Lato-Bold.woff") format("woff");
+  src: url("../public/fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-display: auto;
+  src: url("../public/fonts/Montserrat/Montserrat-Regular.woff") format("woff");
+  src: url("../public/fonts/Montserrat/Montserrat-Regular.ttf")
+    format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $textFont;
+  font-size: 16px;
+  font-weight: 400;
+  font-display: swap;
+  letter-spacing: 0;
+  overflow-x: hidden;
+  background: $white;
+  color: $grayText;
+}
+
+.pink {
+  color: $pink;
+}
+
+p {
+  color: $grayText;
+}
+
+p,
+span {
+  font-family: $textFont;
+  font-size: 14px;
+  letter-spacing: -0.14px;
+  line-height: 22px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: $textFont;
+  color: $pink;
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+}
+h2 {
+  font-family: $textFont;
+  color: $pink;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+}
+
+main {
+  padding: 70px 0 0 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+// section { padding: 0 20px; }
+
+.know__more {
+  position: relative;
+  height: 210px;
+  margin: 20px 0;
+}
+.line {
+  position: absolute;
+  left: 49%;
+  top: 25%;
+  bottom: 0;
+  width: 1px;
+  background: #ccc;
+  z-index: 1;
+  height: 70%;
+}
+
+// SLIDER
+
+// .slider {
+//   border: solid 2px red;
+//   height: auto;
+//   width: 100vw;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// BANNER
+
+//   .banner {
+//     border: solid 2px red;
+//     height: 316px;
+//     width: 100vw;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     .banner__title {
+//       position: absolute;
+//       z-index: 9999;
+//       color: white;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       align-items: center;
+//       text-align: center;
+//       width: 70%;
+
+//       p {
+//        font-family: $textFont;
+//        font-size: 18px;
+//        letter-spacing: -0.36px;
+//        color: $white;
+//      }
+
+//      .banner__title__box {
+//        border: solid 2px;
+//        display: flex;
+//        flex-direction: row;
+//      }
+
+//     }
+
+//   }
+
+// ABOUT
+
+.home__about {
+  // border: solid 2px red;
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 68px;
+}
+
+.home__about h1 {
+  font-size: 24px;
+}
+
+// SERVICES
+
+// OPINIONS
+
+.home__opinions {
+  border: solid $pink;
+  border-width: 0.5px 0;
+  height: 343px;
+  width: 100vw;
+  position: relative;
+
+  @media only screen and (min-width: $desktop) {
+    border-width: 0.5px 0 0 0;
+    width: 95%;
+    margin: 0 auto;
+  }
+  @media only screen and (min-width: $bigScreen) {
+    border-width: 0.5px 0 0 0;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin: 0;
+    position: absolute;
+    top: -30px;
+    width: auto;
+    background: white;
+    padding: 0 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media only screen and (min-width: $desktop) {
+      font: normal normal normal 48px/56px "Lato";
+      letter-spacing: -0.96px;
+    }
+    @media only screen and (min-width: $bigScreen) {
+      font: normal normal normal 48px/56px "Lato";
+      letter-spacing: -0.96px;
+    }
+  }
+}
+
+.arrowCTA {
+  width: 20px;
+  height: 100%;
+}
+
+// Slider
+
+.rec.rec-slider-container {
+  margin: 0 20px;
+}
+
+//   .banner__arrows {
+//     width: 46px;
+//     background: #242424;
+//     color: #fff;
+//     height: 45px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     align-self: center;
+//     z-index: 999;
+//   }
+
+.rec.rec-carousel a:nth-child(1) {
+  position: absolute;
+  left: 0;
+}
+
+.rec.rec-carousel a:nth-child(3n) {
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 600px) {
+}
+
+// Utils
+.pink__line {
+  border: 2px solid $pink;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.text__section {
+  padding: 0 1.5rem;
+}
+
+//   .rec.rec-carousel a:nth-child(1) {
+//     position: relative;
+//   }

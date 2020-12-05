@@ -1,0 +1,143 @@
+@import "../../styles/_vars";
+@import "../../styles/_utils";
+
+.home__portfolio {
+  // border: solid 2px red;
+  height: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 68px;
+  position: relative;
+  margin: 0 auto;
+
+  @media only screen and (min-width: $desktop) {
+    width: 90%;
+    margin: 140px auto 0;
+  }
+  @media only screen and (min-width: $bigScreen) {
+    width: 90%;
+    margin: 140px auto 0;
+  }
+
+  .home__portafolio__container {
+    border: 2px solid $pink;
+    padding: 0 0 50px;
+    position: relative;
+
+    .portafolio__content__container {
+      @media only screen and (min-width: $desktop) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      > img {
+        @media only screen and (min-width: $desktop) {
+          width: 100%;
+          position: relative;
+          top: -40px;
+          left: 40px;
+        }
+        @media only screen and (min-width: $bigScreen) {
+          width: 100%;
+          position: relative;
+          top: -40px;
+          left: 40px;
+        }
+      }
+    }
+
+    .portafolio__content {
+      @media only screen and (min-width: $desktop) {
+        @include flexCenter;
+        align-items: flex-start;
+        width: 60%;
+        margin: 0 auto;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        @include flexCenter;
+        align-items: flex-start;
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      h1 {
+        @media only screen and (min-width: $desktop) {
+          margin: 20px 0;
+          font: normal normal 300 80px/85px Lato;
+          letter-spacing: -3.2px;
+        }
+        @media only screen and (min-width: $bigScreen) {
+          margin: 20px 0;
+          font: normal normal 300 80px/85px Lato;
+          letter-spacing: -3.2px;
+        }
+      }
+
+      p {
+        @media only screen and (min-width: $desktop) {
+          text-align: left;
+          padding: 0;
+        }
+        @media only screen and (min-width: $bigScreen) {
+          text-align: left;
+          padding: 0;
+        }
+      }
+    }
+
+    .button__container {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media only screen and (min-width: $desktop) {
+        position: absolute;
+        left: auto;
+        bottom: -25px;
+        right: -40px;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        position: absolute;
+        left: auto;
+        bottom: -25px;
+        right: -40px;
+      }
+    }
+  }
+
+  .home__portafolio__links {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $pink;
+
+    @media only screen and (min-width: $desktop) {
+      align-items: flex-start;
+    }
+    @media only screen and (min-width: $bigScreen) {
+      align-items: flex-start;
+    }
+  }
+
+  > .cta {
+    position: absolute;
+    bottom: 40px;
+  }
+  > ul .banner__title__box {
+    margin: 0 0 7px;
+  }
+
+  img {
+    width: 100%;
+  }
+}

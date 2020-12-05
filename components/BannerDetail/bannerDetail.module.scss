@@ -1,0 +1,229 @@
+@import "../../styles/_vars";
+@import "../../styles/_utils";
+
+.banner__detail {
+  @media only screen and (min-width: $desktop) {
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+    margin: 0 0 143px;
+  }
+  @media only screen and (min-width: $bigScreen) {
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+    margin: 0 0 143px;
+  }
+
+  .planta {
+    display: none;
+    @media only screen and (min-width: $desktop) {
+      display: block;
+      position: absolute;
+      left: -250px;
+      width: 680px;
+      height: 630px;
+      top: 100px;
+    }
+    @media only screen and (min-width: $bigScreen) {
+      display: block;
+      position: absolute;
+      left: -250px;
+      width: 680px;
+      height: 630px;
+      top: 100px;
+    }
+  }
+
+  .img__content {
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 75%;
+
+    &.img__portafolio {
+      background: url("../../public/images/portafolio/belen-eze.png");
+      width: 100%;
+      height: 90%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 75%;
+    }
+
+    &.img__servicios {
+      background: url("../../public/images/servicios/servicios.png") top center;
+      width: 100%;
+      height: 600px;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media only screen and (min-width: $desktop) {
+        top: 0%;
+        position: relative;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        top: 0%;
+        position: relative;
+      }
+    }
+
+    @media only screen and (min-width: $desktop) {
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 90%;
+      top: 10%;
+      position: relative;
+    }
+    @media only screen and (min-width: $bigScreen) {
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 90%;
+      top: 10%;
+      position: relative;
+    }
+  }
+
+  .know__more {
+    @media only screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    @media only screen and (min-width: $bigScreen) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .know__more__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 85%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 100px 0 60px 0;
+      z-index: 999;
+
+      @media only screen and (min-width: $desktop) {
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: auto;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 50%;
+        position: relative;
+        left: -10px;
+      }
+
+      p {
+        font: normal normal 300 16px/23px Lato;
+        letter-spacing: -0.16px;
+        color: #2e2e2e;
+      }
+
+      h1,
+      h4 {
+        text-align: center;
+        font: normal normal 300 27px/45px Lato;
+        letter-spacing: -0.54px;
+      }
+
+      h4 {
+        color: $pink;
+        margin: 0;
+
+        @media only screen and (min-width: $desktop) {
+          text-align: left;
+          width: 80%;
+          font: normal normal 300 65px/64px Lato;
+          letter-spacing: -3.9px;
+        }
+        @media only screen and (min-width: $bigScreen) {
+          text-align: left;
+          width: 80%;
+          font: normal normal 300 65px/64px Lato;
+          letter-spacing: -3.9px;
+        }
+      }
+
+      h1 {
+        font-size: 50px;
+        margin: 0;
+        @media only screen and (min-width: $desktop) {
+          font-size: 83px;
+          line-height: 72px;
+          letter-spacing: -1.66px;
+        }
+        @media only screen and (min-width: $bigScreen) {
+          font-size: 83px;
+          line-height: 72px;
+          letter-spacing: -1.66px;
+        }
+      }
+    }
+  }
+
+  .know__more__line {
+    position: relative;
+    height: 210px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (min-width: $desktop) {
+      justify-content: flex-end;
+      width: 75%;
+      flex-direction: column-reverse;
+      text-align: end;
+    }
+    @media only screen and (min-width: $bigScreen) {
+      height: 120px;
+      justify-content: flex-end;
+      width: 50%;
+      flex-direction: column-reverse;
+      text-align: end;
+      margin: 0 auto;
+    }
+
+    .line {
+      position: absolute;
+      left: 49%;
+      top: 30%;
+      bottom: 0;
+      width: 1px;
+      background: #ccc;
+      z-index: 1;
+      height: 60%;
+
+      @media only screen and (min-width: $desktop) {
+        position: absolute;
+        left: 0%;
+        top: 40%;
+        bottom: 0;
+        width: 1px;
+        background: #ccc;
+        z-index: 1;
+        height: auto;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        position: absolute;
+        left: 0%;
+        top: 40%;
+        bottom: 0;
+        width: 1px;
+        background: #ccc;
+        z-index: 1;
+        height: auto;
+      }
+    }
+  }
+}
