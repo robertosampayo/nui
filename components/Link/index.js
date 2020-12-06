@@ -1,10 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import cn from 'classnames';
+import cn from "classnames";
 
-import  Link  from 'next/link';
+import Link from "next/link";
 
-export default ({ route = "#", params, children, className, active, style, onClick, id, target = "", prefetch }) => {
+const LinkComponent = ({
+  route = "#",
+  params,
+  children,
+  className,
+  active,
+  style,
+  onClick,
+  id,
+  target = "",
+  prefetch,
+}) => {
   const isExternal = /^https?/.test(route);
   const calculateTarget = () => {
     if (!isExternal) return "";
@@ -35,3 +46,5 @@ export default ({ route = "#", params, children, className, active, style, onCli
 
   return link;
 };
+
+export default LinkComponent;
