@@ -1,14 +1,32 @@
 // import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from "./contactForm.module.scss";
 import utils from "../../utils/utils.module.scss";
-import ButtonOne from "../../components/Buttons/oneButton";
+import SubmitForm from "../../components/Buttons/submitButton";
 import { CgFacebook } from "react-icons/cg";
 import { VscTwitter } from "react-icons/vsc";
 import { SiInstagram } from "react-icons/si";
 import { FaPinterestP } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import useSubmitForm from "../../hooks/useSubmitForm";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
+  const { sendMail, mail } = useSubmitForm();
+
+  const handleSubmit = () => {
+    sendMail({
+      name: "robert",
+      email: "roberto.sanchez@egoargentina.com",
+      text: "Consulta de evento",
+    });
+  };
+
+  const onChangeRecaptcha = (value) => {
+    console.log("Captcha value:", value);
+
+    // handleSubmit();
+  };
+
   return (
     <div className={styles.contact__container} id="contacto">
       <div className={styles.contact}>
@@ -54,12 +72,19 @@ export default function ContactForm() {
               </ul>
             </div>
           </div>
-          <form>
+          <form onSubmit={(e) => e.preventDefault()}>
             <input placeholder="Nombre" />
             <input placeholder="E-mail" />
             <textarea placeholder="Consulta" />
 
-            <ButtonOne primary>CONSULTAR</ButtonOne>
+            <SubmitForm primary value="CONSULTAR">
+              CONSULTAR
+            </SubmitForm>
+
+            <ReCAPTCHA
+              sitekey="Your client site key"
+              onChange={onChangeRecaptcha}
+            />
           </form>
         </div>
       </div>

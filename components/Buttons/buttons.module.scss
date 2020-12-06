@@ -24,6 +24,42 @@
   &.padding__bottom50 {
     padding-bottom: 50px;
   }
+
+  > button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    color: #000;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: -0.48px;
+    cursor: pointer;
+    > span {
+      display: flex;
+      font-family: "Lato", sans-serif;
+      font-weight: 900;
+      font-size: 16px;
+      letter-spacing: -0.48px;
+      position: relative;
+      top: 3px;
+      > div {
+        height: 100%;
+      }
+    }
+  }
+
+  &button:hover {
+    background: transparent;
+    border: 0;
+  }
+  &button:focus {
+    background: transparent;
+    border: 0;
+  }
 }
 
 .banner__cta__pink {
