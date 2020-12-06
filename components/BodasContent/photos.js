@@ -119,12 +119,12 @@ export const photos = [
   },
 
   {
-    src: "/images/boda1/belen-eze29.jpg",
+    src: "/images/boda1/belen-eze29.JPG",
     width: 4,
     height: 3,
   },
   {
-    src: "/images/boda1/belen-eze30.jpg",
+    src: "/images/boda1/belen-eze30.JPG",
     width: 4,
     height: 3,
   },

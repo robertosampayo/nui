@@ -102,7 +102,7 @@ export const photos = [
     height: 3,
   },
   {
-    src: "images/detalles/detalle23.jpg",
+    src: "images/detalles/detalle23.JPG",
     width: 3,
     height: 3,
   },
