@@ -2,7 +2,7 @@ import styles from "./portafolios.module.scss";
 import ButtonOne from "../../components/Buttons/oneButton";
 import SliderOurPortfolio from "../../components/SliderOurPortfolio";
 
-const Portfolios = () => {
+const Portfolios = ({ items }) => {
   return (
     <section className={styles.home__services}>
       <h1>Nuestro Portafolio</h1>
@@ -12,6 +12,8 @@ const Portfolios = () => {
           itemsToShow={3}
           showArrows={true}
           pagination={false}
+          items={items}
+          swipe={false}
         />
       </div>
 
@@ -20,11 +22,14 @@ const Portfolios = () => {
           itemsToShow={1}
           showArrows={false}
           pagination={true}
+          items={items}
         />
       </div>
 
       <div className={styles.home__services__more__servies}>
-        <ButtonOne primary>PORTAFOLIO</ButtonOne>
+        <ButtonOne route="/portafolio" primary>
+          PORTAFOLIO
+        </ButtonOne>
       </div>
     </section>
   );

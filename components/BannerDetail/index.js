@@ -13,6 +13,12 @@ export default function BannerDetail({
         className={`${styles.img__content} 
       ${seccion === "servicios" ? styles.img__servicios : ""}
       ${seccion === "portafolio" ? styles.img__portafolio : ""}
+      ${seccion === "boda1" ? styles.img__boda1 : ""}
+      ${seccion === "detalles" ? styles.img__detalles : ""}
+      ${seccion === "alquileres" ? styles.img__alquileres : ""}
+      ${seccion === "sofi" ? styles.img__sofi : ""}
+
+
       `}
       ></div>
 

@@ -45,7 +45,7 @@ export default function Nav() {
                 </SimpleLink>
               </li>
               <li>
-                <SimpleLink route="/alquileres" id="servicios">
+                <SimpleLink route="/detalles" id="servicios">
                   DETALLES
                 </SimpleLink>
               </li>

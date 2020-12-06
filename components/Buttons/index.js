@@ -1,7 +1,7 @@
 import React from "react";
 
 import colors from "../../styles/colors";
-import Link from "../link";
+import Link from "../Link";
 import trackEvent from "../../utils/tracking";
 import { restoreId } from "../../utils/utils";
 import styles from "./buttons.module.scss";

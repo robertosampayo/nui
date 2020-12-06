@@ -1,6 +1,6 @@
 import React from "react";
 
-import Link from "../link";
+import Link from "../Link";
 import trackEvent from "../../utils/tracking";
 import styles from "./buttons.module.scss";
 import { restoreId } from "../../utils/utils";
@@ -14,6 +14,7 @@ const oneButton = ({
   primary,
   noPadding,
   paddingBottom,
+  paddingBottom50,
   regular,
   className,
   onClick,
@@ -31,6 +32,7 @@ const oneButton = ({
         ${pink ? styles.pink : ""}
         ${noPadding ? styles.no__padding : ""}
          ${paddingBottom ? styles.padding__bottom : ""}
+         ${paddingBottom50 ? styles.padding__bottom50 : ""}
         `}
       >
         <Link

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import Link from '../link';
-import trackEvent from '../../utils/tracking'
-import { restoreId } from '../../utils/utils';
-import styles from './stylesBannerButton.module.scss'
-import { VscChevronLeft, VscChevronRight } from 'react-icons/vsc';
+import Link from "../Link";
+import trackEvent from "../../utils/tracking";
+import { restoreId } from "../../utils/utils";
+import styles from "./stylesBannerButton.module.scss";
+import { VscChevronLeft, VscChevronRight } from "react-icons/vsc";
 import { IconContext } from "react-icons";
 
 const Button = ({
@@ -22,12 +22,8 @@ const Button = ({
   id,
   fullWidth,
   style,
-  dataCy
+  dataCy,
 }) => {
-
-
-
-
   // Track clicks if there's no custom onClick event
   onClick =
     onClick ||
@@ -37,31 +33,24 @@ const Button = ({
 
   return (
     <React.Fragment>
-       <div className={styles.banner__title__box}>
-                <Link
-                    className={styles.banner__cta}
-                    style={{...style}}
-                    id={`btn-${restoreId(id)}`}
-                    route={route}
-                    onClick={onClick}
-                    target={target}
-                    prefetch
-                >
-                    {children}
-                    <IconContext.Provider value={{ className: "arrowCTA" }}>
-                        <div>
-                            <VscChevronRight />
-                        </div>
-                    </IconContext.Provider>
-                </Link>
-       </div>
-
-
-
-
-
-        
-
+      <div className={styles.banner__title__box}>
+        <Link
+          className={styles.banner__cta}
+          style={{ ...style }}
+          id={`btn-${restoreId(id)}`}
+          route={route}
+          onClick={onClick}
+          target={target}
+          prefetch
+        >
+          {children}
+          <IconContext.Provider value={{ className: "arrowCTA" }}>
+            <div>
+              <VscChevronRight />
+            </div>
+          </IconContext.Provider>
+        </Link>
+      </div>
     </React.Fragment>
   );
 };

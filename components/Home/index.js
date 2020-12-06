@@ -19,9 +19,9 @@ export default function Home() {
         <Portafolio />
         <Services items={services} />
 
-        <section className="home__opinions">
+        {/* <section className="home__opinions">
           <h1>Opiniones</h1>
-        </section>
+        </section> */}
 
         <Follow />
 

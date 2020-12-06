@@ -7,6 +7,7 @@ export default function PreviewPortafolio({
   title = "",
   subtitle = "",
   text = "",
+  route = "/",
 }) {
   return (
     <section className={styles.preview__portafolio}>
@@ -26,7 +27,7 @@ export default function PreviewPortafolio({
           <div className={styles.preview__content__text}>
             <h4>{title}</h4>
             <p>{text}</p>
-            <ButtonOne noPadding pink>
+            <ButtonOne route={route} noPadding pink>
               CONOCE MÁS
             </ButtonOne>
           </div>

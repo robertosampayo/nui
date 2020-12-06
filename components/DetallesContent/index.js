@@ -7,6 +7,7 @@ import Gallery from "react-photo-gallery";
 import { photos } from "./photos";
 import Contact from "../ContactForm";
 import Portfolios from "../Portafolios";
+import { portafolios as items } from "../../utils/portafolios";
 
 export default function DetallesContent() {
   const services = [
@@ -25,10 +26,10 @@ export default function DetallesContent() {
           subtitle=""
           title="Detalles"
           text="Productos personalizados que suman a la hora decorar tu evento"
-          seccion="portafolio"
+          seccion="detalles"
         />
         <Gallery photos={photos} />
-        <Portfolios />
+        <Portfolios items={items} />
         <Contact />
       </main>
 

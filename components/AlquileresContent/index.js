@@ -7,6 +7,7 @@ import Gallery from "react-photo-gallery";
 import { photos } from "./photos";
 import Contact from "../ContactForm";
 import Portfolios from "../Portafolios";
+import { portafolios as items } from "../../utils/portafolios";
 
 export default function AlquileresContent() {
   const services = [
@@ -24,11 +25,11 @@ export default function AlquileresContent() {
         <BannerDetail
           subtitle=""
           title="Alquileres"
-          text="Encontrá todo lo que tenemos a disposición para decorar tu evento, preguntanos por diseños a medida."
-          seccion="portafolio"
+          text="Encontrá todo lo que tenemos a disposición para decorar tu evento, preguntanos por diseños a medida"
+          seccion="alquileres"
         />
         <Gallery photos={photos} />
-        <Portfolios />
+        <Portfolios items={items} />
         <Contact />
       </main>
 

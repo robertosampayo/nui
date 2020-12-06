@@ -5,6 +5,7 @@ import styles from "./slider.module.scss";
 import utils from "../../utils/utils.module.scss";
 import { VscChevronLeft, VscChevronRight } from "react-icons/vsc";
 import { IconContext } from "react-icons";
+import Link from "next/link";
 
 export default function Slider({
   itemsToShow = 1,
@@ -75,12 +76,18 @@ export default function Slider({
         }}
       >
         {content?.map((item) => (
-          <div key={item.id} className={styles.home__services__card}>
-            <img src={`${item.image}`} />
-            <h2>{item?.title}</h2>
-            <p className={styles.text__section}>{item?.text}</p>
-            <ButtonOne route={item.link}>CONOCÉ MÁS</ButtonOne>
-          </div>
+          <Link key={item.id} href={item.link} passHref>
+            <a className={styles.link}>
+              <div className={styles.home__services__card}>
+                <img src={`${item.image}`} />
+                <h2>{item?.title}</h2>
+                <p className={styles.text__section}>{item?.text}</p>
+                <ButtonOne noPadding paddingBottom50>
+                  CONOCÉ MÁS
+                </ButtonOne>
+              </div>
+            </a>
+          </Link>
         ))}
       </Carousel>
     </div>

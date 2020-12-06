@@ -53,6 +53,42 @@
       background-position-y: 75%;
     }
 
+    &.img__boda1 {
+      background: url("../../public/images/boda.png");
+      width: 100%;
+      height: 90%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 75%;
+    }
+
+    &.img__detalles {
+      background: url("../../public/images/detalles/detalle68.jpg");
+      width: 100%;
+      height: 90%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 75%;
+    }
+
+    &.img__alquileres {
+      background: url("../../public/images/alquileres/alquileres1.png");
+      width: 100%;
+      height: 90%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 75%;
+    }
+
+    &.img__sofi {
+      background: url("../../public/images/portafolio/15anios.jpg");
+      width: 100%;
+      height: 90%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 75%;
+    }
+
     &.img__servicios {
       background: url("../../public/images/servicios/servicios.png") top center;
       width: 100%;
@@ -144,13 +180,13 @@
         @media only screen and (min-width: $desktop) {
           text-align: left;
           width: 80%;
-          font: normal normal 300 65px/64px Lato;
+          font: normal normal 300 43px/72px Lato;
           letter-spacing: -3.9px;
         }
         @media only screen and (min-width: $bigScreen) {
           text-align: left;
           width: 80%;
-          font: normal normal 300 65px/64px Lato;
+          font: normal normal 300 43px/72px Lato;
           letter-spacing: -3.9px;
         }
       }
@@ -160,13 +196,15 @@
         margin: 0;
         @media only screen and (min-width: $desktop) {
           font-size: 83px;
-          line-height: 72px;
+          line-height: 78px;
           letter-spacing: -1.66px;
+          text-align: left;
         }
         @media only screen and (min-width: $bigScreen) {
           font-size: 83px;
-          line-height: 72px;
+          line-height: 78px;
           letter-spacing: -1.66px;
+          text-align: left;
         }
       }
     }

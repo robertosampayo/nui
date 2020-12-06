@@ -23,8 +23,9 @@ export default function PortafolioContent() {
           position="left"
           image="images/portafolio/belen-eze2.png"
           subtitle="TU DIA ESPECIAL"
-          title="Bodas y recepciones"
+          title="Boda - Belen y Ezequiel"
           text=""
+          route="/portafolio/eve-ezequiel"
         />
 
         <PreviewPortafolio
@@ -32,7 +33,7 @@ export default function PortafolioContent() {
           image="images/portafolio/15anios-main.jpg"
           subtitle="FIESTAS INCREÍBLES"
           title="Fiestas de 15"
-          text=""
+          route="/portafolio/fiesta-sofi"
         />
 
         <PreviewPortafolio
@@ -40,7 +41,7 @@ export default function PortafolioContent() {
           image="images/portafolio/festejatodo.png"
           subtitle="GRANDES Y PEQUEÑOS"
           title="Festejá todo!"
-          text=""
+          route="/"
         />
 
         <PreviewPortafolio
@@ -48,7 +49,7 @@ export default function PortafolioContent() {
           image="images/portafolio/momentos.png"
           subtitle="RENOVATE"
           title="Momentos importantes"
-          text=""
+          route="/"
         />
 
         <Services items={services} />

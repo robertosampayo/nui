@@ -19,7 +19,7 @@
     margin: 0 auto;
   }
 
-  .rec-carousel {
+  :global(.rec.rec-carousel) {
     background: #000;
   }
 

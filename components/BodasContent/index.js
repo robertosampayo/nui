@@ -3,6 +3,9 @@ import Footer from "../Footer";
 import Portfolios from "../Portafolios";
 import styles from "./bodasContent.module.scss";
 import BannerDetail from "../BannerDetail";
+import Gallery from "react-photo-gallery";
+import { photos } from "./photos";
+import { portafolios } from "../../utils/portafolios";
 
 export default function BodasContent() {
   return (
@@ -11,15 +14,20 @@ export default function BodasContent() {
 
       <main>
         <BannerDetail
-          title=""
-          subtitle="Bodas y recepciones"
+          subtitle="Boda"
+          title="Belen y Ezequiel"
           text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
             commodo ligula eget dolor. Cum sociis natoque penatibus et magnis
             dis parturient montes, nascetur ridiculus mus."
-          seccion="servicios"
+          seccion="boda1"
         />
+        <Gallery photos={photos} />
 
-        <Portfolios />
+        <Portfolios
+          items={portafolios.filter(function (item) {
+            return [0].indexOf(item.id) === -1;
+          })}
+        />
       </main>
 
       <Footer />

@@ -1,15 +1,19 @@
 // import { Swiper, SwiperSlide } from 'swiper/react';
 import Carousel, { consts } from "react-elastic-carousel";
 import ButtonOne from "../Buttons/oneButton";
+import SimpleLink from "../Buttons/simpleLink";
 import styles from "./sliderPortfolio.module.scss";
 import utils from "../../utils/utils.module.scss";
 import { VscChevronLeft, VscChevronRight } from "react-icons/vsc";
 import { IconContext } from "react-icons";
+import Link from "next/link";
 
 export default function SliderOurPortfolio({
   itemsToShow = 1,
   showArrows = true,
   pagination = false,
+  items = [],
+  swipe = true,
 }) {
   const myArrow = ({ type, onClick, isEdge }) => {
     const pointer =
@@ -44,6 +48,8 @@ export default function SliderOurPortfolio({
         pagination={pagination}
         showArrows={showArrows}
         renderArrow={myArrow}
+        enableMouseSwipe={swipe}
+        enableSwipe={swipe}
         renderPagination={({ pages, activePage, onClick }) => {
           return (
             <div
@@ -68,32 +74,20 @@ export default function SliderOurPortfolio({
           );
         }}
       >
-        <div className={styles.home__services__card}>
-          <img src="/images/portafolio/bodas.jpg" />
-          <h2>Bodas y recepciones</h2>
-          <p className={styles.text__section}></p>
-          <ButtonOne>CONOCÉ MÁS</ButtonOne>
-        </div>
-        <div className={styles.home__services__card}>
-          <img src="/images/portafolio/15anios.jpg" />
-          <h2>Cumpleaños de 15</h2>
-          <p className={styles.text__section}></p>
-          <ButtonOne>CONOCÉ MÁS</ButtonOne>
-        </div>
-
-        <div className={styles.home__services__card}>
-          <img src="/images/portafolio/festejatodo.png" />
-          <h2>Festejá todo</h2>
-          <p className={styles.text__section}></p>
-          <ButtonOne>CONOCÉ MÁS</ButtonOne>
-        </div>
-
-        <div className={styles.home__services__card}>
-          <img src="/images/portafolio/momentos-importantes.jpg" />
-          <h2>Momentos importantes</h2>
-          <p className={styles.text__section}></p>
-          <ButtonOne>CONOCÉ MÁS</ButtonOne>
-        </div>
+        {items?.map((item) => (
+          <Link key={item.id} href={item.route} passHref>
+            <a className={styles.link}>
+              <div className={styles.home__services__card}>
+                <img src={item.image} />
+                <h2>{item.title}</h2>
+                <p className={styles.text__section}>{item.text}</p>
+                <ButtonOne noPadding paddingBottom50>
+                  CONOCÉ MÁS
+                </ButtonOne>
+              </div>
+            </a>
+          </Link>
+        ))}
       </Carousel>
     </div>
   );
