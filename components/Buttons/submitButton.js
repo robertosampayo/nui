@@ -19,6 +19,7 @@ const submitButton = ({
   type = "submit",
   value = "",
   style,
+  disabled = false,
 }) => {
   return (
     <React.Fragment>
@@ -33,8 +34,8 @@ const submitButton = ({
          ${paddingBottom50 ? styles.padding__bottom50 : ""}
         `}
       >
-        <button
-          className={`${styles.banner__cta} ${
+        <input
+          className={`${styles.banner__cta}  ${styles.button__submit}${
             regular ? styles.cta__regular : ""
           }`}
           style={{ ...style }}
@@ -43,14 +44,14 @@ const submitButton = ({
           target={target}
           type={type}
           value={value}
-        >
-          {children}
-          <IconContext.Provider value={{ className: "arrowCTA" }}>
-            <div>
-              <VscChevronRight />
-            </div>
-          </IconContext.Provider>
-        </button>
+          disabled={disabled}
+        />
+
+        <IconContext.Provider value={{ className: "arrowCTA" }}>
+          <div>
+            <VscChevronRight />
+          </div>
+        </IconContext.Provider>
       </div>
     </React.Fragment>
   );

@@ -25,7 +25,7 @@
     padding-bottom: 50px;
   }
 
-  > button {
+  > .button__submit {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -52,14 +52,10 @@
     }
   }
 
-  &button:hover {
-    background: transparent;
-    border: 0;
-  }
-  &button:focus {
-    background: transparent;
-    border: 0;
-  }
+  // &:visited {
+  //   background: transparent;
+  //   border: 0;
+  // }
 }
 
 .banner__cta__pink {
@@ -97,6 +93,23 @@
       height: 100%;
     }
   }
+
+  &:hover {
+    background: transparent;
+    border: 0;
+  }
+  &:focus {
+    background: transparent;
+    border: 0;
+  }
+  &:visited {
+    background: transparent;
+    border: 0;
+  }
+  &:active {
+    background: transparent;
+    border: 0;
+  }
 }
 
 .cta__regular {
@@ -108,7 +121,22 @@
 
 .Button {
   position: relative;
-
+  &:hover {
+    background: transparent;
+    border: 0;
+  }
+  &:focus {
+    background: transparent;
+    border: 0;
+  }
+  &:visited {
+    background: transparent;
+    border: 0;
+  }
+  &:active {
+    background: transparent;
+    border: 0;
+  }
   &::before {
     content: "";
     position: absolute;

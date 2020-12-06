@@ -10,13 +10,6 @@ import Portfolios from "../Portafolios";
 import { portafolios as items } from "../../utils/portafolios";
 
 export default function DetallesContent() {
-  const services = [
-    {
-      title: "Detalles",
-      text: "Productos personalizados que suman a la hora decorar tu evento.",
-    },
-  ];
-
   return (
     <div className="home">
       <Nav />

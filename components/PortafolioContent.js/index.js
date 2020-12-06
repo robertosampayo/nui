@@ -41,7 +41,7 @@ export default function PortafolioContent() {
           image="images/portafolio/festejatodo.png"
           subtitle="GRANDES Y PEQUEÑOS"
           title="Festejá todo!"
-          route="/"
+          route="/portafolio/festeja-todo"
         />
 
         <PreviewPortafolio
@@ -49,7 +49,7 @@ export default function PortafolioContent() {
           image="images/portafolio/momentos.png"
           subtitle="RENOVATE"
           title="Momentos importantes"
-          route="/"
+          route="/portafolio/momentos-importantes"
         />
 
         <Services items={services} />

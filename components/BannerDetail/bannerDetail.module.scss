@@ -89,6 +89,23 @@
       background-position-y: 75%;
     }
 
+    &.img__festeja__todo {
+      background: url("../../public/images/portafolio/1.jpg");
+      width: 100%;
+      height: 90%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 75%;
+    }
+    &.img__momentos {
+      background: url("../../public/images/detalles/detalle50.jpg");
+      width: 100%;
+      height: 90%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 75%;
+    }
+
     &.img__servicios {
       background: url("../../public/images/servicios/servicios.png") top center;
       width: 100%;

@@ -17,6 +17,8 @@ export default function BannerDetail({
       ${seccion === "detalles" ? styles.img__detalles : ""}
       ${seccion === "alquileres" ? styles.img__alquileres : ""}
       ${seccion === "sofi" ? styles.img__sofi : ""}
+      ${seccion === "festeja-todo" ? styles.img__festeja__todo : ""}
+      ${seccion === "momentos" ? styles.img__momentos : ""}
 
 
       `}

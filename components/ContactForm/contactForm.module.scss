@@ -158,6 +158,17 @@
         > textarea {
           height: 188px;
         }
+        .errors {
+          p {
+            color: red;
+          }
+        }
+
+        .success {
+          p {
+            color: rgb(53, 192, 53);
+          }
+        }
       }
     }
   }
