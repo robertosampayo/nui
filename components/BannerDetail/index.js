@@ -14,6 +14,9 @@ export default function BannerDetail({
       ${seccion === "servicios" ? styles.img__servicios : ""}
       ${seccion === "portafolio" ? styles.img__portafolio : ""}
       ${seccion === "boda1" ? styles.img__boda1 : ""}
+      ${seccion === "boda2" ? styles.img__boda2 : ""}
+      ${seccion === "boda3" ? styles.img__boda3 : ""}
+      ${seccion === "boda4" ? styles.img__boda4 : ""}
       ${seccion === "detalles" ? styles.img__detalles : ""}
       ${seccion === "alquileres" ? styles.img__alquileres : ""}
       ${seccion === "sofi" ? styles.img__sofi : ""}

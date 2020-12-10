@@ -1,17 +1,17 @@
 export const portafolios = [
   {
     id: 0,
-    title: "Boda - Eve y Ezequiel",
+    title: "Bodas y recepciones",
     text: "",
     image: "/images/boda.png",
-    route: "/portafolio/eve-ezequiel",
+    route: "/portafolio/bodas",
   },
   {
     id: 1,
-    title: "Fiesta de 15 - Sofi",
+    title: "Fiestas de 15",
     text: "",
     image: "/images/portafolio/15anios.jpg",
-    route: "/portafolio/fiesta-sofi",
+    route: "/portafolio/fiestas-de-15",
   },
   {
     id: 2,

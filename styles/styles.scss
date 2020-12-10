@@ -272,6 +272,16 @@ ul {
 //   right: 0;
 // }
 
+.react-images__dialog > .react-images__container > .react-images__header {
+  top: 70px;
+  z-index: 999999999999999;
+}
+
+.react-images__frame {
+  width: 60%;
+  margin: 0 auto;
+}
+
 @media (max-width: 600px) {
 }
 

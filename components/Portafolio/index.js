@@ -18,15 +18,15 @@ export default function Portafolio() {
 
             <ul className={styles.home__portafolio__links}>
               <ButtonOne
-                route="/portafolio/eve-ezequiel"
+                route="/portafolio/bodas"
                 noPadding
                 regular
                 paddingBottom
               >
-                Boda - Belen y Ezequiel
+                Bodas y recepciones
               </ButtonOne>
               <ButtonOne
-                route="/portafolio/fiesta-sofi"
+                route="/portafolio/fiestas-15"
                 noPadding
                 regular
                 paddingBottom
@@ -37,7 +37,7 @@ export default function Portafolio() {
                 Festejá todo!
               </ButtonOne>
               <ButtonOne
-                route="/momentos-importantes"
+                route="/portafolio/momentos-importantes"
                 noPadding
                 regular
                 paddingBottom

@@ -23,6 +23,7 @@
     "react-elastic-carousel": "^0.9.1",
     "react-google-recaptcha": "^2.1.0",
     "react-icons": "^3.11.0",
+    "react-images": "^1.1.7",
     "react-photo-gallery": "^8.0.0",
     "sass": "^1.27.0",
     "sass-loader": "^10.1.0",
