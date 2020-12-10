@@ -1,3 +1,5 @@
+import React from "react";
+React.useLayoutEffect = React.useEffect;
 import Nav from "../NavBar";
 import Footer from "../Footer";
 import Services from "../Services";

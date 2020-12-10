@@ -37,7 +37,11 @@ export default function MenuMobile({ open }) {
               <h1>NUI</h1>
             </li>
             <li>
-              <SimpleLink route="/nosotros" id="nosotros">
+              <SimpleLink
+                route="/#nosotros"
+                id="nosotros"
+                onClick={handleClose}
+              >
                 Nosotros
               </SimpleLink>
             </li>
@@ -47,12 +51,21 @@ export default function MenuMobile({ open }) {
               </SimpleLink>
             </li>
             <li>
-              <SimpleLink route="/servicios" id="servicios">
-                Servicios
+              <SimpleLink route="/alquileres" id="servicios">
+                ALquileres
               </SimpleLink>
             </li>
             <li>
-              <SimpleLink route="/contacto" id="contacto">
+              <SimpleLink route="/detalles" id="servicios">
+                Detalles
+              </SimpleLink>
+            </li>
+            <li>
+              <SimpleLink
+                route="/#contacto"
+                id="contacto"
+                onClick={handleClose}
+              >
                 Escribinos!
               </SimpleLink>
             </li>

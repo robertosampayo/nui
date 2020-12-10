@@ -45,69 +45,35 @@
     background-position-y: 75%;
 
     &.img__portafolio {
-      background: url("../../public/images/portafolio/belen-eze.png");
-      width: 100%;
-      height: 90%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position-y: 75%;
+      background-image: url("../../public/images/portafolio/belen-eze.png");
     }
 
     &.img__boda1 {
-      background: url("../../public/images/boda.png");
-      width: 100%;
-      height: 90%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position-y: 75%;
+      background-image: url("../../public/images/boda.png");
     }
 
     &.img__detalles {
-      background: url("../../public/images/detalles/detalle68.jpg");
-      width: 100%;
-      height: 90%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position-y: 75%;
+      background-image: url("../../public/images/detalles/detalle68.jpg");
     }
 
     &.img__alquileres {
-      background: url("../../public/images/alquileres/alquileres1.png");
-      width: 100%;
-      height: 90%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position-y: 75%;
+      background-image: url("../../public/images/alquileres/alquileres1.png");
     }
 
     &.img__sofi {
-      background: url("../../public/images/portafolio/15anios.jpg");
-      width: 100%;
-      height: 90%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position-y: 75%;
+      background-image: url("../../public/images/portafolio/15anios.jpg");
     }
 
     &.img__festeja__todo {
-      background: url("../../public/images/portafolio/1.jpg");
-      width: 100%;
-      height: 90%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position-y: 75%;
+      background-image: url("../../public/images/portafolio/1.jpg");
     }
     &.img__momentos {
-      background: url("../../public/images/detalles/detalle50.jpg");
-      width: 100%;
-      height: 90%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position-y: 75%;
+      background-image: url("../../public/images/detalles/detalle50.jpg");
     }
 
     &.img__servicios {
-      background: url("../../public/images/servicios/servicios.png") top center;
+      background-image: url("../../public/images/servicios/servicios.png") top
+        center;
       width: 100%;
       height: 600px;
       background-size: cover;

@@ -53,7 +53,18 @@
     .logo {
       position: relative;
       width: auto;
-      height: 40px;
+      height: 30px;
+      top: 15px;
+      @media only screen and (min-width: $desktop) {
+        position: relative;
+        width: auto;
+        height: 40px;
+      }
+      @media only screen and (min-width: $bigScreen) {
+        position: relative;
+        width: auto;
+        height: 40px;
+      }
     }
 
     > h1 {
