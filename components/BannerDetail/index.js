@@ -17,6 +17,8 @@ export default function BannerDetail({
       ${seccion === "boda2" ? styles.img__boda2 : ""}
       ${seccion === "boda3" ? styles.img__boda3 : ""}
       ${seccion === "boda4" ? styles.img__boda4 : ""}
+      ${seccion === "bodaBrianJorgelina" ? styles.img__bodaBrianJorgelina : ""}
+      ${seccion === "bodaAdrianEliana" ? styles.img__bodaAdrianEliana : ""}
       ${seccion === "detalles" ? styles.img__detalles : ""}
       ${seccion === "alquileres" ? styles.img__alquileres : ""}
       ${seccion === "sofi" ? styles.img__sofi : ""}

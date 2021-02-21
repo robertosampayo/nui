@@ -9,6 +9,8 @@ import { photos } from "./photos";
 import { photos as photos2 } from "./photos2";
 import { photos as photos3 } from "./photos3";
 import { photos as photos4 } from "./photos4";
+import { photos as photosBrianJorgelina } from "./photosBrianJorgelina";
+import { photos as photosAdrianEliana } from "./photosAdrianEliana";
 import { portafolios } from "../../utils/portafolios";
 import Carousel, { Modal, ModalGateway } from "react-images";
 
@@ -185,11 +187,75 @@ export default function BodasContent() {
             </Modal>
           ) : null}
         </ModalGateway>
+
+        <BannerDetail
+          subtitle=""
+          title="Adrian y Eliana"
+          text=""
+          seccion="bodaAdrianEliana"
+        />
+        <Gallery photos={photosAdrianEliana} onClick={openLightbox4} />
+        <ModalGateway>
+          {viewerIsOpen4 ? (
+            <Modal
+              onClose={closeLightbox4}
+              allowFullscreen={false}
+              closeOnEsc={true}
+              styles={{ zIndex: "999999999", heigth: "90%" }}
+            >
+              <Carousel
+                styles={{ zIndex: "999999999", heigth: "90%" }}
+                currentIndex={currentImage4}
+                views={photosAdrianEliana.map((x) => ({
+                  ...x,
+                  srcset: x.srcSet,
+                  caption: x.title,
+                }))}
+              />
+            </Modal>
+          ) : null}
+        </ModalGateway>
+
+        <BannerDetail
+          subtitle=""
+          title="Brian y Jorgelina"
+          text=""
+          seccion="bodaBrianJorgelina"
+        />
+        <Gallery photos={photosBrianJorgelina} onClick={openLightbox4} />
+        <ModalGateway>
+          {viewerIsOpen4 ? (
+            <Modal
+              onClose={closeLightbox4}
+              allowFullscreen={false}
+              closeOnEsc={true}
+              styles={{ zIndex: "999999999", heigth: "90%" }}
+            >
+              <Carousel
+                styles={{ zIndex: "999999999", heigth: "90%" }}
+                currentIndex={currentImage4}
+                views={photosBrianJorgelina.map((x) => ({
+                  ...x,
+                  srcset: x.srcSet,
+                  caption: x.title,
+                }))}
+              />
+            </Modal>
+          ) : null}
+        </ModalGateway>
+
+
         <Portfolios
           items={portafolios.filter(function (item) {
             return [0].indexOf(item.id) === -1;
           })}
         />
+
+
+        
+
+
+        
       </main>
 
       <Footer />
