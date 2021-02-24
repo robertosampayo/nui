@@ -18,14 +18,17 @@ const handler = async (req, res) => {
     const transporter = nodemailer.createTransport({
       host: 'smtpout.secureserver.net',
       port: 465,
-      secure: false,
+      secure: true,
+      secureConnection: false,
       auth: {
         user: 'info@nuieventos.com',
         pass: 'Elartemegusta23.'
       },
-      tls: {
-        rejectUnauthorized: false
-      }
+      requireTLS:true,
+      debug: true,
+    //   tls: {
+    //     rejectUnauthorized: false
+    //   }
   
     });
 
@@ -41,8 +44,8 @@ const handler = async (req, res) => {
      const info = await transporter.sendMail(mailOptions);
   
     console.log('Message sent', info);
-  
-    // res.send('received');
+      
+    res.send('received');
   }
 
   export default handler;
