@@ -1,33 +1,48 @@
-const nodemailer = require("nodemailer");
+const { Router } = require('express');
+const nodemailer = require('nodemailer');
+const router = Router();
 
-const transporter = nodemailer.createTransport({
-  service: "Gmail",
-  auth: {
-    type: "OAuth2",
-    user: "jrobertosampayo@gmail.com",
-    refreshToken: "",
-    accessToken: "",
-    clientId:
-      "21964235098-5toshv8fcg6psj3d3vvk9dr25fv0sc9b.apps.googleusercontent.com",
-    clientSecret: "EI3f6PoMgV0ptOjexNUJEI--",
-  },
+router.post('/send-email', async (req, res) => {
+
+  const { name, email, phone, message } = req.body;
+
+  constentHTML = `
+    <h1>User Information</h1>
+    <ul>
+      <li>Username: ${name}</li>
+      <li>User Email: ${email}</li>
+      <li>Phone ${phone}</li>
+
+    </ul>
+    <p>${message}</p>
+  
+  `;
+  const transporter = nodemailer.createTransport({
+    host: 'smtpout.secureserver.net',
+    port: 26,
+    secure: false,
+    auth: {
+      user: 'info@nuieventos.com',
+      pass: 'Elartemegusta23.'
+    },
+    tls: {
+      rejectUnauthorized: false
+    }
+
+  });
+
+  const info = await transporter.sendMail({
+    from: "'Nui Eventos <info@nuieventos.com>'",
+    to: 'fazttech@gmail.com',
+    subject: 'Website contact form',
+    text: 'Hello world'
+
+  });
+
+  console.log('Message sent', info.messageId);
+
+  res.send('received');
+
 });
 
-const send = ({ email, name, text }) => {
-  const from = name && email ? `${name} <${email}>` : `${name || email}`;
-  const message = {
-    from,
-    to: "roberto.sanchez@egoargentina.com",
-    subject: `New message from ${from}`,
-    text,
-    replyTo: from,
-  };
-
-  return new Promise((resolve, reject) => {
-    transporter.sendMail(message, (error, info) =>
-      error ? reject(error) : resolve(info)
-    );
-  });
-};
-
-module.exports = send;
+module.exports = router;
