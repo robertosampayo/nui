@@ -59,31 +59,31 @@ export default function Nav() {
               <li>
                 <IconContext.Provider value={{ size: "20px" }}>
                   <div>
-                    <CgFacebook />
+                    <a href='https://www.facebook.com/eventos.nui' target='_blank'><CgFacebook /></a>
                   </div>
                 </IconContext.Provider>
               </li>
-              <li>
+              {/* <li>
                 <IconContext.Provider value={{ size: "20px" }}>
                   <div>
                     <VscTwitter />
                   </div>
                 </IconContext.Provider>
-              </li>
+              </li> */}
               <li>
                 <IconContext.Provider value={{ size: "20px" }}>
                   <div>
-                    <SiInstagram />
+                  <a href='https://instagram.com/eventos.nui?igshid=w3jyadalzsh8' target='_blank'><SiInstagram /></a>
                   </div>
                 </IconContext.Provider>
               </li>
-              <li>
+              {/* <li>
                 <IconContext.Provider value={{ size: "20px" }}>
                   <div>
                     <FaPinterestP />
                   </div>
                 </IconContext.Provider>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div

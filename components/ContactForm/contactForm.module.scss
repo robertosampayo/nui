@@ -124,7 +124,11 @@
           ul {
             display: flex;
             width: 60%;
-            justify-content: space-between;
+            justify-content: start;
+
+            > li {
+              margin-right: 20px;
+            }
 
             @media only screen and (min-width: $desktop) {
               width: 30%;

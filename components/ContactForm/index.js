@@ -22,7 +22,6 @@ export default function ContactForm() {
   const [disabled, setDisabled] = useState(true);
 
   const handleSubmit = () => {
-    console.log(state);
     sendMail({
       name: state.fields['name'],
       email: state.fields['mail'],
@@ -31,7 +30,6 @@ export default function ContactForm() {
   };
 
   const onChangeRecaptcha = (value) => {
-    console.log("Captcha value:", value);
 
     // handleSubmit();
   };
@@ -113,31 +111,31 @@ export default function ContactForm() {
                 <li>
                   <IconContext.Provider value={{ size: "25px" }}>
                     <div>
-                      <CgFacebook />
+                      <a href='https://www.facebook.com/eventos.nui' target='_blank'><CgFacebook /></a>
                     </div>
                   </IconContext.Provider>
                 </li>
-                <li>
+                {/* <li>
                   <IconContext.Provider value={{ size: "25px" }}>
                     <div>
                       <VscTwitter />
                     </div>
                   </IconContext.Provider>
-                </li>
+                </li> */}
                 <li>
                   <IconContext.Provider value={{ size: "25px" }}>
                     <div>
-                      <SiInstagram />
+                      <a href='https://instagram.com/eventos.nui?igshid=w3jyadalzsh8' target='_blank'><SiInstagram /></a>
                     </div>
                   </IconContext.Provider>
                 </li>
-                <li>
+                {/* <li>
                   <IconContext.Provider value={{ size: "25px" }}>
                     <div>
                       <FaPinterestP />
                     </div>
                   </IconContext.Provider>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

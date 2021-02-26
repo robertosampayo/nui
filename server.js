@@ -55,7 +55,6 @@ app.prepare().then(() => {
      const info = await transporter.sendMail(mailOptions);
   
 
-    console.log("success ", info);
 
   });
 
