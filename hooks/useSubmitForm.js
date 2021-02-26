@@ -4,7 +4,7 @@ const useSubmitForm = () => {
   const [mail, setStateMail] = useState(false);
 
   const sendMail = (data) => {
-    fetch("/api/contact", {
+    fetch("/api/mail", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
