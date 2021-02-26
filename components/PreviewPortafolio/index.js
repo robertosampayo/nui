@@ -10,7 +10,10 @@ export default function PreviewPortafolio({
   route = "/",
 }) {
   return (
+    
+    
     <section className={styles.preview__portafolio}>
+    <a href={route} >
       <div>
         <div
           className={`
@@ -27,12 +30,13 @@ export default function PreviewPortafolio({
           <div className={styles.preview__content__text}>
             <h4>{title}</h4>
             <p>{text}</p>
-            <ButtonOne route={route} noPadding pink>
+            <a href={route} style={{'padding': '20px 5px 0', 'color': '#c491a5'}} noPadding pink>
               CONOCE MÁS
-            </ButtonOne>
+            </a>
           </div>
         </div>
       </div>
+    </a>
     </section>
   );
 }
