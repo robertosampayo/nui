@@ -22,10 +22,11 @@ export default function ContactForm() {
   const [disabled, setDisabled] = useState(true);
 
   const handleSubmit = () => {
+    console.log(state);
     sendMail({
-      name: "robert",
-      email: "roberto.sanchez@egoargentina.com",
-      text: "Consulta de evento",
+      name: state.fields['name'],
+      email: state.fields['mail'],
+      text: state.fields['text'],
     });
   };
 
@@ -76,7 +77,7 @@ export default function ContactForm() {
     }
 
     if (formIsValid && fields["name"] && fields["mail"] && fields["text"]) {
-      // handleSubmit();
+      handleSubmit();
       console.log("submited");
       setstate({
         ...state,

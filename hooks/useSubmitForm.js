@@ -12,6 +12,7 @@ const useSubmitForm = () => {
       },
       body: JSON.stringify(data),
     }).then((res) => {
+      console.log(res);
       res.status === 200 ? setStateMail(true) : setStateMail(false);
     });
   };

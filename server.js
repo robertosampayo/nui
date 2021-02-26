@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
-const mailer = require("./mailer");
+const nodemailer = require("nodemailer");
 
 app.prepare().then(() => {
   const server = express();
@@ -15,19 +15,48 @@ app.prepare().then(() => {
     return handle(req, res);
   });
 
-  server.post("/api/contact", (req, res) => {
+  server.post("/api/contact", async (req, res) => {
     const { email = "", name = "", text = "" } = req.body;
 
-    console.log("success", email);
-    // mailer({ email, name, text })
-    //   .then(() => {
-    //     console.log("success", email);
-    //     res.send("success");
-    //   })
-    //   .catch((error) => {
-    //     console.log("failed", error);
-    //     res.send("badddd");
-    //   });
+    const constentHTML = `
+      <h1>Consulta</h1>
+      <ul>
+        <li>Nombre: ${name}</li>
+        <li>Email: ${email}</li>
+  
+      </ul>
+      <p>${name} consulta lo siguiente:<br><br> ${text}</p>
+    
+    `;
+    const transporter = nodemailer.createTransport({
+      host: 'smtpout.secureserver.net',
+      port: 465,
+      secure: true,
+      secureConnection: false,
+      auth: {
+        user: 'info@nuieventos.com',
+        pass: 'Elartemegusta23.'
+      },
+      requireTLS:true,
+      debug: true,
+
+  
+    });
+
+    const mailOptions = {
+        from: "'Nui Eventos <info@nuieventos.com>'",
+        to: `${email}`,
+        subject: 'Website contact form',
+        html: constentHTML
+    
+      }
+  
+
+     const info = await transporter.sendMail(mailOptions);
+  
+
+    console.log("success ", info);
+
   });
 
   
