@@ -14,8 +14,8 @@ export default function SofiContent() {
 
       <main>
         <BannerDetail
-          subtitle="Fiesta de 15"
-          title="Sofi"
+          subtitle="Fiestas"
+          title="de 15"
           text=""
           seccion="sofi"
         />

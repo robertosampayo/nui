@@ -26,14 +26,14 @@ export default function Portafolio() {
                 Bodas y recepciones
               </ButtonOne>
               <ButtonOne
-                route="/portafolio/fiestas-15"
+                route="/portafolio/fiestas-de-15"
                 noPadding
                 regular
                 paddingBottom
               >
                 Fiestas de 15
               </ButtonOne>
-              <ButtonOne route="/festeja-todo" noPadding regular paddingBottom>
+              <ButtonOne route="/portafolio/festeja-todo" noPadding regular paddingBottom>
                 Festejá todo!
               </ButtonOne>
               <ButtonOne

@@ -187,4 +187,65 @@ export const photos = [
     width: 4,
     height: 3,
   },
+  {
+    src: "/images/detalles/detalle70.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/detalles/detalle71.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/detalles/detalle72.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/detalles/detalle73.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/detalles/detalle74.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/detalles/detalle75.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/detalles/detalle76.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/detalles/detalle77.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/detalles/detalle78.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/detalles/detalle79.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/detalles/detalle80.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/detalles/detalle81.jpg",
+    width: 4,
+    height: 3,
+  },
+
 ];
