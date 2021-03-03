@@ -75,8 +75,8 @@ export default function SliderOurPortfolio({
         }}
       >
         {items?.map((item) => (
-          <Link key={item.id} href={item.route} passHref>
-            <a className={styles.link}>
+
+            <a key={item.id} href={item.route} className={styles.link}>
               <div className={styles.home__services__card}>
                 <img src={item.image} />
                 <h2>{item.title}</h2>
@@ -86,7 +86,7 @@ export default function SliderOurPortfolio({
                 </ButtonOne>
               </div>
             </a>
-          </Link>
+       
         ))}
       </Carousel>
     </div>
